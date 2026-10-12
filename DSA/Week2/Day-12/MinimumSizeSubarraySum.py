@@ -14,31 +14,25 @@
 from py_compile import main
 
 
-def minSubArrayLen(self, target, nums):
+def minSubArrayLen(target, nums):
     i = 0
-    j = 0
-    total = 0
-    ans = float('inf')
+    window_sum = 0
+    min_len = float("inf")
 
-    while j < len(nums):
-        total += nums[j]
-
-        while total >= target:
-            ans = min(ans, j - i + 1)
-            total -= nums[i]
+    for j in range(len(nums)):
+        window_sum += nums[j]              
+        while window_sum >= target:       
+            min_len = min(min_len, j - i + 1)
+            window_sum -= nums[i]
             i += 1
 
-            j += 1
+    return 0 if min_len == float("inf") else min_len
 
-    if ans == float("inf"):
-        return 0
-    return ans
-        
 
 if __name__ == "__main__":
     target = 7
     nums = [2, 3, 1, 2, 4, 3]
-    print(minSubArrayLen(target, nums))  # Output: 2
+    print(minSubArrayLen(target, nums)) # Output: 2
 
     target = 4
     nums = [1, 4, 4]
