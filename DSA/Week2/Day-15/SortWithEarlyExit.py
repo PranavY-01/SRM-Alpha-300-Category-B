@@ -25,11 +25,11 @@ def SortWithEarlyExit(arr):
 
 if __name__ == "__main__":
     # Test cases
-    nums = [5, 2, 3, 1]
-    print(SortWithEarlyExit(nums))  # Output: [1, 2, 3, 5]
+    nums1 = [5, 2, 3, 1]
+    print(SortWithEarlyExit(nums1))  # Output: [1, 2, 3, 5]
 
-    nums = [5, 1, 1, 2, 0, 0]
-    print(SortWithEarlyExit(nums))  # Output: [0, 0, 1, 1, 2, 5]
+    nums2 = [5, 1, 1, 2, 0, 0]
+    print(SortWithEarlyExit(nums2))  # Output: [0, 0, 1, 1, 2, 5]
 
-    nums = [1, 2, 3, 4, 5]
-    print(SortWithEarlyExit(nums))  # Output: [1, 2, 3, 4, 5] (Optimized case, early exit)
+    nums3 = [1, 2, 3, 4, 5]
+    print(SortWithEarlyExit(nums3))  # Output: [1, 2, 3, 4, 5] (Optimized case, early exit)
