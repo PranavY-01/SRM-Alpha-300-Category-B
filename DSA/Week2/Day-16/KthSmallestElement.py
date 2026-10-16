@@ -44,11 +44,11 @@ if __name__ == "__main__":
     k2 = 1
     print(kthSmallest(matrix2, k2))  # Output: -5
 
-# ----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
 # Time complexity: O(n * log(max - min))
 # Space complexity: O(1)
 # Pattern: Binary Search on Value Range
 # How it works: We perform a binary search on the range of values in the matrix. 
 # For each mid value, we count how many elements in the matrix are less than or equal to mid and adjust our search range until we find the kth smallest element. 
 
-#----------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------
