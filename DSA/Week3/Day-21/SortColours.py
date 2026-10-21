@@ -1,4 +1,4 @@
-# Week 3 - Day 21 - Problem: 75. Sort Colors (Dutch Flag Problem)
+# Week 3 - Day 21 - Problem: 75. Sort Colors (Dutch Flag Problem - 3 way partitioning)
 # ----------------------------------------------------------------------------------------
 # Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
 # We will use the integers 0, 1, and 2 to represent the colors red, white, and blue, respectively.
@@ -9,19 +9,24 @@
 # nums[i] is either 0, 1, or 2.
 # ----------------------------------------------------------------------------------------
 
+
 def sortColors(nums):
-    # Count occurrences of each color
-    count = [0, 0, 0]  # count[0] for red (0), count[1] for white (1), count[2] for blue (2)
+    low = 0
+    mid = 0
+    high = len(nums) - 1
 
-    for num in nums:
-        count[num] += 1
+    while mid <= high:
+        if nums[mid] == 0:
+            nums[low], nums[mid] = nums[mid], nums[low]
+            low += 1
+            mid += 1
 
-    # Reconstruct the sorted array based on counts
-    index = 0
-    for color in range(3):
-        for _ in range(count[color]):
-            nums[index] = color
-            index += 1
+        elif nums[mid] == 1:
+            mid += 1
+
+        else:  # nums[mid] == 2
+            nums[mid], nums[high] = nums[high], nums[mid]
+            high -= 1
 
     return nums
 
