@@ -39,5 +39,10 @@ if __name__ == "__main__":
     print(sortColors(nums2))  # Output: [0, 1, 2]
 
 # -----------------------------------------------------------------------------------------
-# This problem has already been solved in Day 20 using the Counting Sort approach. The code above is a same implementation approach of the problem.
+# Time complexity: O(n) where n is the number of elements in the input array.
+# Space complexity: O(1) as we are using a constant amount of extra space.
+# Pattern: Dutch National Flag Algorithm (3-way partitioning)
+# How it works: This implementation uses three pointers (low, mid, high) to partition the array. 
+# The low pointer tracks the position for the next 0, the mid pointer scans through the array, and the high pointer tracks the position for the next 2. 
+# Depending on the value at mid, we swap elements to ensure that all 0s are at the beginning, all 1s are in the middle, and all 2s are at the end of the array.
 # -----------------------------------------------------------------------------------------
