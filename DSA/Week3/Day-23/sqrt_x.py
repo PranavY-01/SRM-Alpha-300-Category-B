@@ -13,7 +13,7 @@ def mySqrt(x):
     right = x
     answer = 0
 
-    while left <= right:
+    while left <= right:  # Basic binary search loop to find the integer square root.
         mid = left + (right - left) // 2
 
         if mid * mid <= x:
