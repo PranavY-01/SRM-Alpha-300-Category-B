@@ -15,8 +15,11 @@
 # 0 <= target <= 10^6
 # ----------------------------------------------------------------------------------------
 
+# Step 1: Find the peak index of the mountain array using binary search.
+# Step 2: Perform binary search on the ascending part of the mountain array (from the start to the peak) to find the target.
+# Step 3: If the target is not found in the ascending part, perform binary search on the descending part of the mountain array (from the peak to the end) to find the target.
 def findInMountainArray(target, mountain_arr):
-    def find_peak_index(arr):
+    def find_peak_index(arr):   
         left, right = 0, len(arr) - 1
         while left < right:
             mid = left + (right - left) // 2
@@ -26,12 +29,12 @@ def findInMountainArray(target, mountain_arr):
                 right = mid
         return left
 
-    def binary_search(arr, target, left, right, ascending=True):
+    def binary_search(arr, target, left, right, ascending=True):   # search in ascending or descending order based on the 'ascending' flag
         while left <= right:
             mid = left + (right - left) // 2
             if arr[mid] == target:
                 return mid
-            if ascending:
+            if ascending:  # search in ascending order
                 if arr[mid] < target:
                     left = mid + 1
                 else:
@@ -43,11 +46,11 @@ def findInMountainArray(target, mountain_arr):
                     right = mid - 1
         return -1
 
-    peak_index = find_peak_index(mountain_arr)
+    peak_index = find_peak_index(mountain_arr)  # Find the peak index of the mountain array
     index = binary_search(mountain_arr, target, 0, peak_index)
-    if index != -1:
+    if index != -1:  
         return index
-    return binary_search(mountain_arr, target, peak_index + 1, len(mountain_arr) - 1, ascending=False)
+    return binary_search(mountain_arr, target, peak_index + 1, len(mountain_arr) - 1, ascending=False)  # Search in the descending part of the mountain array if not found in the ascending part
 
 if __name__ == "__main__":
     # Test cases
