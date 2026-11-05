@@ -1,4 +1,4 @@
-# DSA Daily Gym | November | Week 1 | Day 4 | Problem: 125. Valid Palindrome
+# DSA Daily Gym | November | Week 1 | Day 5 | Problem: 125. Valid Palindrome
 # --------------------------------------------------------------------------------------
 # Given a string s, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 # Constraints:
