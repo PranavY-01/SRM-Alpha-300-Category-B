@@ -56,3 +56,9 @@ if __name__ == "__main__":
 
     s3 = "a good   example"
     print(reverseWords(s3))  # Output: "example good a"
+
+# --------------------------------------------------------------------------------------
+# Time Complexity: O(n), where n is the length of the string s
+# Space Complexity: O(n), for the list of words
+# Pattern: String Manipulation - Word Reversal
+# --------------------------------------------------------------------------------------
