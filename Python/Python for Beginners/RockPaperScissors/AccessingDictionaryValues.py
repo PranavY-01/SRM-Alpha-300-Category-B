@@ -1,4 +1,4 @@
-# Python For Beginners | Chapter 1: Rock, Paper, Scissors | Class 8. Refactoring and Nested If Statements
+# Python For Beginners | Chapter 1: Rock, Paper, Scissors | Class 9. Accessing Dictionary Values
 # -----------------------------------------------------------------------
 # -----------------------------------------------------------------------
 # A. Direct Accessing Dictionary Values
