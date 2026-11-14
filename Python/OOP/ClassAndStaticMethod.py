@@ -1,5 +1,10 @@
 # Object-Oriented Programming in Python Course | Class 2. Class and Static Methods
 # -----------------------------------------------------------------------
+class Item:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
 # -----------------------------------------------------------------------
 # A. Creating a class method
 # -----------------------------------------------------------------------
@@ -14,7 +19,6 @@ def instantiate_from_csv(cls):
 
 import csv
 
-from Python.OOP.GettingStarted import Item
 
 @classmethod
 def instantiate_from_csv(cls):
