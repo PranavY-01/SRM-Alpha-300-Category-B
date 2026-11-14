@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors
+# Python For Beginners | Chapter 1: Rock, Paper, Scissors | Class 1: Variables and Functions
 # -----------------------------------------------------------------------
 # -----------------------------------------------------------------------
 # A. Functions
