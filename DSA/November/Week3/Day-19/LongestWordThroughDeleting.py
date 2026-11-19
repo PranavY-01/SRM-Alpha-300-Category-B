@@ -61,3 +61,9 @@ if __name__ == "__main__":
     s = "abpcplea"
     dictionary = ["a", "b", "c"]
     print(findLongestWord(s, dictionary))  # Output: "a"
+
+# ------------------------------------------------------------------------
+# Time Complexity: O(n * m), where n is the length of s and m is the total length of all words in the dictionary.
+# Space Complexity: O(1)
+# Pattern: Two Pointers, String Manipulation
+# ------------------------------------------------------------------------
