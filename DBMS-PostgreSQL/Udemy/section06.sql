@@ -1,6 +1,6 @@
 /*  PostgreSQL and DBMS Training | Udemy Course 
 ----------------------------------------------------------------------------------------------
-    Section 5. Working with Large Datasets
+    Section 6. Working with Large Datasets
 ----------------------------------------------------------------------------------------------
 */ 
 
@@ -22,6 +22,7 @@ CREATE TABLE orders (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id),
   product_id INTEGER REFERENCES products(id),
+  quantity INTEGER,
   paid BOOLEAN
 );
  
